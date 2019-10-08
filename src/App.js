@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import ToggleWrapper from "./toggle/toggleWrapper";
+import ModalWrapper from "./modal/modalWrapper";
+import FormWrapper from "./form/formWrapper";
+
+const Container = styled.div`
+  margin: 0 auto;
+  padding: 10rem;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-row-gap: 50px;
+  justify-items: center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <ToggleWrapper />
+      <ModalWrapper />
+      <FormWrapper />
+    </Container>
   );
 }
 
